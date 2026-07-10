@@ -115,8 +115,8 @@ h1 {
 .links .btn--primary { background: #2f5fa7; }
 .links .btn--inverse { background: #3f4652; }
 .links .btn--danger { background: #c94f4f; }
-.links .btn--model { background: #24746b; }
-.links .model-icon { color: #ffcc4d; }
+.links .btn--model { background: #ffcc4d; }
+.links .model-icon { color: #fff; }
 .links .btn:hover { filter: brightness(0.92); }
 
 section { margin: 48px 0; }
