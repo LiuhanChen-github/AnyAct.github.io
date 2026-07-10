@@ -24,55 +24,455 @@
     <section class="lead-media" aria-label="AnyAct video demo">
       <a class="video-card" href="https://youtu.be/pA14g99KsNY" target="_blank" rel="noopener" aria-label="Watch the AnyAct video on YouTube">
         <img src="assets/youtube_teaser.jpg" alt="AnyAct video teaser" />
-        <span class="play-button" aria-hidden="true">
-          <span></span>
-        </span>
+        <span class="play-button" aria-hidden="true"><span></span></span>
         <span class="video-label">Watch full video</span>
       </a>
     </section>
 
-    <section class="text-section" id="about">
-      <h2>Abstract</h2>
+    <section class="text-section" id="what-is-anyact">
+      <h2>What is AnyAct?</h2>
       <p>
-        AnyAct aims to reenact human motion from arbitrary character videos. Given a source video of an animal, cartoon, object, or stylized character, the method extracts sparse local 2D articulated cues and generates a plausible 3D human motion sequence that follows the character's action semantics.
+        AnyAct reenacts human motion from arbitrary character videos. It converts sparse 2D motion cues from animals, cartoons, objects, and stylized characters into plausible 3D human motions that preserve the source action semantics.
       </p>
     </section>
 
     <section class="text-section" id="method">
       <h2>Method Overview</h2>
       <p>
-        AnyAct follows a two-stage training pipeline. A 3D stage first learns motion generation with sparse motion guidance, and a 2D stage then learns to control generation from projected sparse 2D observations. At inference time, sparse 2D controls extracted from a source character video drive the generated human motion.
+        AnyAct uses sparse local 2D controls extracted from a source video to guide motion generation. The model is trained in two stages: a 3D stage learns sparse-motion guidance, and a 2D stage learns to control generation from projected sparse 2D observations.
       </p>
+        <figure class="overview-figure">
+            <img src="assets/gifs/slide02_video01_range_output_51_165.gif" alt="Range Output 51 Reference video" loading="lazy" />
+            <figcaption>Reference video</figcaption>
+        </figure>
     </section>
 
-    <section id="results">
-      <h2>Qualitative Results</h2>
-      <p class="section-copy">Representative examples from the project video are shown below.</p>
-      <div class="gallery-grid">
-        <figure>
-          <img src="assets/kangaroo_jump.gif" alt="Kangaroo jump reenactment" loading="lazy" />
-          <figcaption>Kangaroo jump</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/butterfly_fly.gif" alt="Butterfly flight reenactment" loading="lazy" />
-          <figcaption>Butterfly flight</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/monster_fly.gif" alt="Monster flight reenactment" loading="lazy" />
-          <figcaption>Monster flight</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/bear_jump.gif" alt="Bear jump reenactment" loading="lazy" />
-          <figcaption>Bear jump</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/ghost_dance.gif" alt="Ghost dance reenactment" loading="lazy" />
-          <figcaption>Ghost dance</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/cat_walk_circle.gif" alt="Cat circular walk reenactment" loading="lazy" />
-          <figcaption>Cat circular walk</figcaption>
-        </figure>
+    <section id="visual-comparison">
+      <h2>Visual Comparison</h2>
+      <p class="section-copy">Each group shows the reference video, our generated 3D motion, and available comparison results from the project material.</p>
+      <div class="card-stack">
+        <article class="result-card comparison-card">
+          <h3>Bear Jump1</h3>
+          <div class="media-grid media-count-4">
+          <figure>
+            <img src="assets/gifs/slide08_video01_range_output_3_144.gif" alt="Range Output 3 Reference video" loading="lazy" />
+            <figcaption>Reference video</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gifs/slide08_video02_render_bear_jump1_video.gif" alt="Bear Jump1 3D motion" loading="lazy" />
+            <figcaption>3D motion</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gifs/slide08_video03_render_bear_jump1_video_hy.gif" alt="Bear Jump1 Video Hy HY-Motion" loading="lazy" />
+            <figcaption>HY-Motion</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gifs/slide08_video04_render_bear_jump1_video_echomotion.gif" alt="Bear Jump1 Video Echomotion EchoMotion" loading="lazy" />
+            <figcaption>EchoMotion</figcaption>
+          </figure>
+          </div>
+        </article>
+        <article class="result-card comparison-card">
+          <h3>Ender Penguin Walk4</h3>
+          <div class="media-grid media-count-4">
+          <figure>
+            <img src="assets/gifs/slide09_video01_ender_penguin_walk4_video.gif" alt="Ender Penguin Walk4 3D motion" loading="lazy" />
+            <figcaption>3D motion</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gifs/slide09_video02_range_output_4_193_1080p.gif" alt="Range Output 4 193 1080P Reference video" loading="lazy" />
+            <figcaption>Reference video</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gifs/slide09_video03_render_penguin_walk4_video_hy.gif" alt="Penguin Walk4 Video Hy HY-Motion" loading="lazy" />
+            <figcaption>HY-Motion</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gifs/slide09_video04_render_penguin_walk4_video_echomotion.gif" alt="Penguin Walk4 Video Echomotion EchoMotion" loading="lazy" />
+            <figcaption>EchoMotion</figcaption>
+          </figure>
+          </div>
+        </article>
+        <article class="result-card comparison-card">
+          <h3>Rabbit Jump</h3>
+          <div class="media-grid media-count-4">
+          <figure>
+            <img src="assets/gifs/slide10_video01_render_rabit_jump_video.gif" alt="Rabbit Jump 3D motion" loading="lazy" />
+            <figcaption>3D motion</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gifs/slide10_video02_render_rabit_jump_video_echomotion.gif" alt="Rabbit Jump Video Echomotion EchoMotion" loading="lazy" />
+            <figcaption>EchoMotion</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gifs/slide10_video03_render_rabit_jump_video_hy.gif" alt="Rabbit Jump Video Hy HY-Motion" loading="lazy" />
+            <figcaption>HY-Motion</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gifs/slide10_video04_range_output_5_194.gif" alt="Range Output 5 Reference video" loading="lazy" />
+            <figcaption>Reference video</figcaption>
+          </figure>
+          </div>
+        </article>
+        <article class="result-card comparison-card">
+          <h3>Kangaroo Jump4</h3>
+          <div class="media-grid media-count-4">
+          <figure>
+            <img src="assets/gifs/slide34_video01_range_output_51_165.gif" alt="Range Output 51 Reference video" loading="lazy" />
+            <figcaption>Reference video</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gifs/slide34_video02_kangeroo_jump4_istock.gif" alt="Kangaroo Jump4 Reference video" loading="lazy" />
+            <figcaption>Reference video</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gifs/slide34_video03_render_kangeroo_jump4_video.gif" alt="Kangaroo Jump4 3D motion" loading="lazy" />
+            <figcaption>3D motion</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gifs/slide34_video04_render_kangeroo_jump4_istock_seedance2_0_video.gif" alt="Kangaroo Jump4 Seedance2.0 Seedance" loading="lazy" />
+            <figcaption>Seedance</figcaption>
+          </figure>
+          </div>
+        </article>
+        <article class="result-card comparison-card">
+          <h3>Luckycat Wave5</h3>
+          <div class="media-grid media-count-4">
+          <figure>
+            <img src="assets/gifs/slide35_video01_render_luckycat_wave5_seedance2_0_video.gif" alt="Luckycat Wave5 Seedance2.0 Seedance" loading="lazy" />
+            <figcaption>Seedance</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gifs/slide35_video02_range_output_4_124_1080p.gif" alt="Range Output 4 124 1080P Reference video" loading="lazy" />
+            <figcaption>Reference video</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gifs/slide35_video03_render_luckycat_wave5_video.gif" alt="Luckycat Wave5 3D motion" loading="lazy" />
+            <figcaption>3D motion</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gifs/slide35_video04_lucycat_wave5_istock.gif" alt="Lucycat Wave5 Reference video" loading="lazy" />
+            <figcaption>Reference video</figcaption>
+          </figure>
+          </div>
+        </article>
+        <article class="result-card comparison-card">
+          <h3>Penguin Walk4</h3>
+          <div class="media-grid media-count-4">
+          <figure>
+            <img src="assets/gifs/slide36_video01_range_output_73_193_1080p.gif" alt="Range Output 73 193 1080P Reference video" loading="lazy" />
+            <figcaption>Reference video</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gifs/slide36_video02_penguin_walk4_istock.gif" alt="Penguin Walk4 Reference video" loading="lazy" />
+            <figcaption>Reference video</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gifs/slide36_video03_render_penguin_walk4_istock.gif" alt="Penguin Walk4 3D motion" loading="lazy" />
+            <figcaption>3D motion</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gifs/slide36_video04_render_penguin_walk4_istock_seedance2_0_video.gif" alt="Penguin Walk4 Seedance2.0 Seedance" loading="lazy" />
+            <figcaption>Seedance</figcaption>
+          </figure>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="more-results">
+      <h2>More Results</h2>
+      <p class="section-copy">Additional examples include both the reference video GIF and the corresponding generated 3D motion GIF.</p>
+      <div class="card-stack">
+        <article class="result-card">
+          <h3>Kangaroo Jump4</h3>
+          <div class="media-grid media-count-1">
+          <figure>
+            <img src="assets/gifs/slide03_video01_render_kangeroo_jump4_video.gif" alt="Kangaroo Jump4 3D motion" loading="lazy" />
+            <figcaption>3D motion</figcaption>
+          </figure>
+          </div>
+        </article>
+        <article class="result-card">
+          <h3>Butterfly Fly3</h3>
+          <div class="media-grid media-count-2">
+          <figure>
+            <img src="assets/gifs/slide04_video01_render_butterfly_fly3_video.gif" alt="Butterfly Fly3 3D motion" loading="lazy" />
+            <figcaption>3D motion</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gifs/slide04_video02_range_output_7_292.gif" alt="Range Output 7 Reference video" loading="lazy" />
+            <figcaption>Reference video</figcaption>
+          </figure>
+          </div>
+        </article>
+        <article class="result-card">
+          <h3>Luckycat Wave5</h3>
+          <div class="media-grid media-count-2">
+          <figure>
+            <img src="assets/gifs/slide05_video01_render_luckycat_wave5_video.gif" alt="Luckycat Wave5 3D motion" loading="lazy" />
+            <figcaption>3D motion</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gifs/slide05_video02_range_output_4_281_1080p.gif" alt="Range Output 4 281 1080P Reference video" loading="lazy" />
+            <figcaption>Reference video</figcaption>
+          </figure>
+          </div>
+        </article>
+        <article class="result-card">
+          <h3>Monster Fly2</h3>
+          <div class="media-grid media-count-4">
+          <figure>
+            <img src="assets/gifs/slide07_video01_render_monster_fly2_720p_crop.gif" alt="Monster Fly2 3D motion" loading="lazy" />
+            <figcaption>3D motion</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gifs/slide07_video02_range_output_68_230.gif" alt="Range Output 68 Reference video" loading="lazy" />
+            <figcaption>Reference video</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gifs/slide07_video03_render_monster_fly2_720p_crop.gif" alt="Monster Fly2 3D motion" loading="lazy" />
+            <figcaption>3D motion</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gifs/slide07_video04_render_monster_fly2_720p_crop.gif" alt="Monster Fly2 3D motion" loading="lazy" />
+            <figcaption>3D motion</figcaption>
+          </figure>
+          </div>
+        </article>
+        <article class="result-card">
+          <h3>Ghost Dance1</h3>
+          <div class="media-grid media-count-2">
+          <figure>
+            <img src="assets/gifs/slide12_video01_render_ghost_dance1_video.gif" alt="Ghost Dance1 3D motion" loading="lazy" />
+            <figcaption>3D motion</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gifs/slide12_video02_range_output_4_249.gif" alt="Range Output 4 Reference video" loading="lazy" />
+            <figcaption>Reference video</figcaption>
+          </figure>
+          </div>
+        </article>
+        <article class="result-card">
+          <h3>Deer Walk1</h3>
+          <div class="media-grid media-count-2">
+          <figure>
+            <img src="assets/gifs/slide13_video01_render_dear_walk1_video.gif" alt="Deer Walk1 3D motion" loading="lazy" />
+            <figcaption>3D motion</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gifs/slide13_video02_range_output_3_256.gif" alt="Range Output 3 Reference video" loading="lazy" />
+            <figcaption>Reference video</figcaption>
+          </figure>
+          </div>
+        </article>
+        <article class="result-card">
+          <h3>Penguin Walk5</h3>
+          <div class="media-grid media-count-2">
+          <figure>
+            <img src="assets/gifs/slide14_video01_range_output_7_164.gif" alt="Range Output 7 Reference video" loading="lazy" />
+            <figcaption>Reference video</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gifs/slide14_video02_render_penguin_walk5_video.gif" alt="Penguin Walk5 3D motion" loading="lazy" />
+            <figcaption>3D motion</figcaption>
+          </figure>
+          </div>
+        </article>
+        <article class="result-card">
+          <h3>Monkey Walk3</h3>
+          <div class="media-grid media-count-2">
+          <figure>
+            <img src="assets/gifs/slide15_video01_range_output_5_74.gif" alt="Range Output 5 Reference video" loading="lazy" />
+            <figcaption>Reference video</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gifs/slide15_video02_render_monkey_walk3_video.gif" alt="Monkey Walk3 3D motion" loading="lazy" />
+            <figcaption>3D motion</figcaption>
+          </figure>
+          </div>
+        </article>
+        <article class="result-card">
+          <h3>Dinosaur Walk5</h3>
+          <div class="media-grid media-count-2">
+          <figure>
+            <img src="assets/gifs/slide16_video01_render_dinosaur_walk5_video.gif" alt="Dinosaur Walk5 3D motion" loading="lazy" />
+            <figcaption>3D motion</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gifs/slide16_video02_range_output_5_144.gif" alt="Range Output 5 Reference video" loading="lazy" />
+            <figcaption>Reference video</figcaption>
+          </figure>
+          </div>
+        </article>
+        <article class="result-card">
+          <h3>Seal Walk1</h3>
+          <div class="media-grid media-count-2">
+          <figure>
+            <img src="assets/gifs/slide17_video01_range_output_4_108.gif" alt="Range Output 4 Reference video" loading="lazy" />
+            <figcaption>Reference video</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gifs/slide17_video02_render_seal_walk1_istock_video.gif" alt="Seal Walk1 3D motion" loading="lazy" />
+            <figcaption>3D motion</figcaption>
+          </figure>
+          </div>
+        </article>
+        <article class="result-card">
+          <h3>Monster Jump1</h3>
+          <div class="media-grid media-count-2">
+          <figure>
+            <img src="assets/gifs/slide18_video01_range_output_1_65.gif" alt="Range Output 1 Reference video" loading="lazy" />
+            <figcaption>Reference video</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gifs/slide18_video02_render_monster_jump1_720p_video.gif" alt="Monster Jump1 3D motion" loading="lazy" />
+            <figcaption>3D motion</figcaption>
+          </figure>
+          </div>
+        </article>
+        <article class="result-card">
+          <h3>Robot Walk1</h3>
+          <div class="media-grid media-count-2">
+          <figure>
+            <img src="assets/gifs/slide19_video01_range_output_23_193.gif" alt="Range Output 23 Reference video" loading="lazy" />
+            <figcaption>Reference video</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gifs/slide19_video02_render_robot_walk1_istock_video.gif" alt="Robot Walk1 3D motion" loading="lazy" />
+            <figcaption>3D motion</figcaption>
+          </figure>
+          </div>
+        </article>
+        <article class="result-card">
+          <h3>Cat Walk Circle</h3>
+          <div class="media-grid media-count-3">
+          <figure>
+            <img src="assets/gifs/slide21_video01_range_output_4_143.gif" alt="Range Output 4 Reference video" loading="lazy" />
+            <figcaption>Reference video</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gifs/slide21_video02_render_cat_walk_circle_video.gif" alt="Cat Walk Circle 3D motion" loading="lazy" />
+            <figcaption>3D motion</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gifs/slide21_video03_render_cat_walk_forward_video.gif" alt="Cat Walk Forward 3D motion" loading="lazy" />
+            <figcaption>3D motion</figcaption>
+          </figure>
+          </div>
+        </article>
+        <article class="result-card">
+          <h3>Kangaroo Jump2</h3>
+          <div class="media-grid media-count-3">
+          <figure>
+            <img src="assets/gifs/slide22_video01_render_kangeroo_jump2_video.gif" alt="Kangaroo Jump2 3D motion" loading="lazy" />
+            <figcaption>3D motion</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gifs/slide22_video02_render_kangeroo_jump0_2_video.gif" alt="Kangaroo Jump0.2 3D motion" loading="lazy" />
+            <figcaption>3D motion</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gifs/slide22_video03_range_output_51_165.gif" alt="Range Output 51 Reference video" loading="lazy" />
+            <figcaption>Reference video</figcaption>
+          </figure>
+          </div>
+        </article>
+        <article class="result-card">
+          <h3>Penguin Walk5 -20</h3>
+          <div class="media-grid media-count-3">
+          <figure>
+            <img src="assets/gifs/slide23_video01_range_output_7_164.gif" alt="Range Output 7 Reference video" loading="lazy" />
+            <figcaption>Reference video</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gifs/slide23_video02_render_penguin_walk5_-20_video.gif" alt="Penguin Walk5 -20 3D motion" loading="lazy" />
+            <figcaption>3D motion</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gifs/slide23_video03_render_penguin_walk5_20_video.gif" alt="Penguin Walk5 +20 3D motion" loading="lazy" />
+            <figcaption>3D motion</figcaption>
+          </figure>
+          </div>
+        </article>
+        <article class="result-card">
+          <h3>Drunkman Walk1</h3>
+          <div class="media-grid media-count-2">
+          <figure>
+            <img src="assets/gifs/slide25_video01_range_output_6_275.gif" alt="Range Output 6 Reference video" loading="lazy" />
+            <figcaption>Reference video</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gifs/slide25_video02_render_drunkman_walk1_video.gif" alt="Drunkman Walk1 3D motion" loading="lazy" />
+            <figcaption>3D motion</figcaption>
+          </figure>
+          </div>
+        </article>
+        <article class="result-card">
+          <h3>Human High Knees1</h3>
+          <div class="media-grid media-count-2">
+          <figure>
+            <img src="assets/gifs/slide26_video01_render_human_high_knees1_video.gif" alt="Human High Knees1 3D motion" loading="lazy" />
+            <figcaption>3D motion</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gifs/slide26_video02_range_output_5_234.gif" alt="Range Output 5 Reference video" loading="lazy" />
+            <figcaption>Reference video</figcaption>
+          </figure>
+          </div>
+        </article>
+        <article class="result-card">
+          <h3>Fig1 C</h3>
+          <div class="media-grid media-count-2">
+          <figure>
+            <img src="assets/gifs/slide28_video01_render_fig1_c_crop_video.gif" alt="Fig1 C 3D motion" loading="lazy" />
+            <figcaption>3D motion</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gifs/slide28_video02_range_output_1_53.gif" alt="Range Output 1 Reference video" loading="lazy" />
+            <figcaption>Reference video</figcaption>
+          </figure>
+          </div>
+        </article>
+        <article class="result-card">
+          <h3>Fig7 Composition</h3>
+          <div class="media-grid media-count-2">
+          <figure>
+            <img src="assets/gifs/slide29_video01_range_output_1_93.gif" alt="Range Output 1 Reference video" loading="lazy" />
+            <figcaption>Reference video</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gifs/slide29_video02_render_fig7_composition_video.gif" alt="Fig7 Composition 3D motion" loading="lazy" />
+            <figcaption>3D motion</figcaption>
+          </figure>
+          </div>
+        </article>
+        <article class="result-card">
+          <h3>Frog Swim4</h3>
+          <div class="media-grid media-count-2">
+          <figure>
+            <img src="assets/gifs/slide31_video01_render_frog_swim4_video.gif" alt="Frog Swim4 3D motion" loading="lazy" />
+            <figcaption>3D motion</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gifs/slide31_video02_range_output_4_193.gif" alt="Range Output 4 Reference video" loading="lazy" />
+            <figcaption>Reference video</figcaption>
+          </figure>
+          </div>
+        </article>
+        <article class="result-card">
+          <h3>Crab Walk2</h3>
+          <div class="media-grid media-count-2">
+          <figure>
+            <img src="assets/gifs/slide32_video01_range_output_1_200_1080p.gif" alt="Range Output 1 200 1080P Reference video" loading="lazy" />
+            <figcaption>Reference video</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gifs/slide32_video02_render_crab_walk2_video.gif" alt="Crab Walk2 3D motion" loading="lazy" />
+            <figcaption>3D motion</figcaption>
+          </figure>
+          </div>
+        </article>
       </div>
     </section>
 
