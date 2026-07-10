@@ -36,8 +36,8 @@ body {
 .header-copy {
   width: 100%;
   max-width: none;
-  margin: 0;
-  text-align: left;
+  margin: 0 auto;
+  text-align: center;
 }
 
 h1 {
@@ -50,13 +50,13 @@ h1 {
 }
 
 .authors {
-  margin: 0 0 8px;
+  margin: 0 auto 8px;
   width: 100%;
   max-width: none;
   color: #3f4652;
-  font-size: 19px;
+  font-size: 22px;
   line-height: 1.45;
-  text-align: left;
+  text-align: center;
 }
 
 .authors sup,
@@ -68,21 +68,23 @@ h1 {
 .affiliations {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 6px 20px;
-  margin: 0 0 10px;
+  justify-content: center;
+  gap: 6px 22px;
+  margin: 0 auto 10px;
   width: 100%;
   max-width: none;
   color: var(--muted);
-  font-size: 15px;
-  line-height: 1.35;
+  font-size: 17px;
+  line-height: 1.4;
+  text-align: center;
 }
 
 
 .venue {
-  margin: 0 0 18px;
+  margin: 0 auto 18px;
   color: var(--muted);
-  font-size: 16px;
+  font-size: 17px;
+  text-align: center;
 }
 
 .links {
@@ -247,8 +249,14 @@ figcaption {
   margin-top: 7px;
 }
 
+#bibtex {
+  width: 100%;
+  max-width: none;
+}
+
 pre,
 .citation-box {
+  display: block;
   max-width: none;
   width: 100%;
   overflow-x: auto;
