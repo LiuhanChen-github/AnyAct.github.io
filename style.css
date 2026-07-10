@@ -171,6 +171,30 @@ h3 {
   margin: 24px auto 0;
 }
 
+
+.showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.showcase-case {
+  border-top: 1px solid var(--line);
+  padding-top: 18px;
+}
+
+.showcase-kangaroo {
+  grid-column: 1 / -1;
+}
+
+.showcase-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  align-items: start;
+}
+
 .card-stack {
   display: grid;
   gap: 26px;
@@ -224,12 +248,14 @@ pre {
 }
 
 @media (max-width: 900px) {
+  .showcase-grid { grid-template-columns: 1fr; }
   .media-count-3,
   .media-count-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 640px) {
   .page { width: min(100% - 22px, var(--max)); padding-top: 30px; }
+  .showcase-pair,
   .media-grid,
   .media-count-3,
   .media-count-4 { grid-template-columns: 1fr; }
