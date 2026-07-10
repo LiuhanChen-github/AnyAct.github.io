@@ -43,10 +43,38 @@ h1 {
 }
 
 .authors {
-  margin: 0 auto 6px;
-  max-width: 920px;
+  margin: 0 auto 8px;
+  max-width: 960px;
   color: #3f4652;
   font-size: 17px;
+}
+
+.authors sup,
+.affiliations sup,
+.author-notes sup {
+  font-size: 0.72em;
+  line-height: 0;
+}
+
+.affiliations {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px 18px;
+  margin: 0 auto 6px;
+  max-width: 980px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.author-notes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 13px;
 }
 
 .venue {
