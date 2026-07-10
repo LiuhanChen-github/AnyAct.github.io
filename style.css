@@ -33,6 +33,13 @@ body {
   margin-bottom: 28px;
 }
 
+.header-copy {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  text-align: left;
+}
+
 h1 {
   margin: 0 auto 16px;
   max-width: 980px;
@@ -240,10 +247,12 @@ figcaption {
   margin-top: 7px;
 }
 
-pre {
-  max-width: 880px;
+pre,
+.citation-box {
+  max-width: none;
+  width: 100%;
   overflow-x: auto;
-  margin: 18px auto 0;
+  margin: 18px 0 0;
   padding: 16px;
   background: #f3f5f7;
   border: 1px solid var(--line);
