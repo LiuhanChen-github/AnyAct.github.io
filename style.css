@@ -54,7 +54,7 @@ h1 {
   width: 100%;
   max-width: 960px;
   color: #3f4652;
-  font-size: 23px;
+  font-size: 22px;
   line-height: 1.45;
   text-align: center;
 }
@@ -74,7 +74,7 @@ h1 {
   width: 100%;
   max-width: 900px;
   color: var(--muted);
-  font-size: 18px;
+  font-size: 17px;
   line-height: 1.4;
   text-align: center;
 }
@@ -83,7 +83,7 @@ h1 {
 .venue {
   margin: 0 auto 18px;
   color: var(--muted);
-  font-size: 18px;
+  font-size: 17px;
   text-align: center;
 }
 
