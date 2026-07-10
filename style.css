@@ -215,6 +215,17 @@ h3 {
   width: 100%;
 }
 
+.control-edit-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 26px;
+  margin-top: 24px;
+}
+
+.control-edit-card {
+  width: 100%;
+}
+
 .card-stack {
   display: grid;
   gap: 26px;
