@@ -91,24 +91,24 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
+  gap: 12px;
 }
 
 .links .btn {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
+  gap: 9px;
   color: #fff;
   text-decoration: none;
-  padding: 8px 14px;
+  padding: 11px 18px;
   border-radius: 4px;
-  font-size: 14px;
+  font-size: 17px;
   font-weight: 700;
   line-height: 1.2;
 }
 
 .links .btn i {
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1;
 }
 
