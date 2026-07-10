@@ -137,7 +137,7 @@ h3 {
   align-items: flex-start;
   gap: 18px;
   margin-top: 24px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .more-pair-grid,
