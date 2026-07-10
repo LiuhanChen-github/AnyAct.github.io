@@ -177,16 +177,17 @@ h3 {
 }
 
 
-.showcase-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
-  margin-top: 20px;
-}
 
 .showcase-case {
+  display: block;
+  width: 100%;
   border-top: 1px solid var(--line);
   padding-top: 18px;
+  margin: 24px 0 0;
+}
+
+.showcase-case + .showcase-case {
+  margin-top: 34px;
 }
 
 .showcase-combined img {
