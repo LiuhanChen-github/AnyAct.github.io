@@ -44,9 +44,10 @@ h1 {
 
 .authors {
   margin: 0 auto 8px;
-  max-width: 960px;
+  max-width: 1080px;
   color: #3f4652;
-  font-size: 17px;
+  font-size: 19px;
+  line-height: 1.45;
 }
 
 .authors sup,
@@ -60,21 +61,23 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 6px 18px;
+  gap: 6px 20px;
   margin: 0 auto 6px;
-  max-width: 980px;
+  max-width: 1080px;
   color: var(--muted);
-  font-size: 14px;
+  font-size: 15px;
+  line-height: 1.35;
 }
 
 .author-notes {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 14px;
+  gap: 16px;
   margin: 0 0 12px;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 14px;
+  line-height: 1.35;
 }
 
 .venue {
@@ -119,9 +122,9 @@ h2 {
   text-align: left;
 }
 
-h3 {
-  margin: 0 0 14px;
-  font-size: 20px;
+h4 {
+  margin: 0 0 12px;
+  font-size: 18px;
   line-height: 1.25;
   font-weight: 650;
 }
