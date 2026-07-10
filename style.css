@@ -132,10 +132,12 @@ h3 {
 
 
 .showcase-pair-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   gap: 18px;
   margin-top: 24px;
+  flex-wrap: wrap;
 }
 
 .more-pair-grid,
@@ -149,6 +151,12 @@ h3 {
 
 .pair-result-figure img {
   width: 100%;
+}
+
+.showcase-case .pair-result-figure img {
+  width: auto;
+  max-width: none;
+  height: auto;
 }
 
 
