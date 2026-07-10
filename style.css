@@ -35,7 +35,7 @@ body {
 
 .header-copy {
   width: 100%;
-  max-width: none;
+  max-width: 980px;
   margin: 0 auto;
   text-align: center;
 }
@@ -52,9 +52,9 @@ h1 {
 .authors {
   margin: 0 auto 8px;
   width: 100%;
-  max-width: none;
+  max-width: 960px;
   color: #3f4652;
-  font-size: 22px;
+  font-size: 23px;
   line-height: 1.45;
   text-align: center;
 }
@@ -72,9 +72,9 @@ h1 {
   gap: 6px 22px;
   margin: 0 auto 10px;
   width: 100%;
-  max-width: none;
+  max-width: 900px;
   color: var(--muted);
-  font-size: 17px;
+  font-size: 18px;
   line-height: 1.4;
   text-align: center;
 }
@@ -83,7 +83,7 @@ h1 {
 .venue {
   margin: 0 auto 18px;
   color: var(--muted);
-  font-size: 17px;
+  font-size: 18px;
   text-align: center;
 }
 
