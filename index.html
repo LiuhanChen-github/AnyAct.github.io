@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AnyAct: Towards Human Reenactment of Character Motion From Video</title>
+  <meta name="description" content="AnyAct project page." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <h1>AnyAct: Towards Human Reenactment of Character Motion From Video</h1>
+      <p class="authors">Liuhan Chen, Lei Zhong, Jiewei Wang, Qin Shuai, Li Yuan, Leidong Fan, Qing Li, Kanglin Liu</p>
+      <p class="venue">arXiv 2026</p>
+      <nav class="links" aria-label="Project links">
+        <a href="https://arxiv.org/abs/2605.15497">Paper</a>
+        <a href="https://youtu.be/pA14g99KsNY">Video</a>
+        <a href="https://github.com/LiuhanChen-github/AnyAct">Code</a>
+        <a href="https://huggingface.co/LiuhanChen/AnyAct">Model</a>
+        <a href="https://www.modelscope.cn/models/clhxclh/AnyAct">ModelScope</a>
+      </nav>
+    </header>
+
+    <section class="lead-media" aria-label="AnyAct video demo">
+      <a class="video-card" href="https://youtu.be/pA14g99KsNY" target="_blank" rel="noopener" aria-label="Watch the AnyAct video on YouTube">
+        <img src="assets/youtube_teaser.jpg" alt="AnyAct video teaser" />
+        <span class="play-button" aria-hidden="true">
+          <span></span>
+        </span>
+        <span class="video-label">Watch full video</span>
+      </a>
+    </section>
+
+    <section class="text-section" id="about">
+      <h2>Abstract</h2>
+      <p>
+        AnyAct aims to reenact human motion from arbitrary character videos. Given a source video of an animal, cartoon, object, or stylized character, the method extracts sparse local 2D articulated cues and generates a plausible 3D human motion sequence that follows the character's action semantics.
+      </p>
+    </section>
+
+    <section class="text-section" id="method">
+      <h2>Method Overview</h2>
+      <p>
+        AnyAct follows a two-stage training pipeline. A 3D stage first learns motion generation with sparse motion guidance, and a 2D stage then learns to control generation from projected sparse 2D observations. At inference time, sparse 2D controls extracted from a source character video drive the generated human motion.
+      </p>
+    </section>
+
+    <section id="results">
+      <h2>Qualitative Results</h2>
+      <p class="section-copy">Representative examples from the project video are shown below.</p>
+      <div class="gallery-grid">
+        <figure>
+          <img src="assets/kangaroo_jump.gif" alt="Kangaroo jump reenactment" loading="lazy" />
+          <figcaption>Kangaroo jump</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/butterfly_fly.gif" alt="Butterfly flight reenactment" loading="lazy" />
+          <figcaption>Butterfly flight</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/monster_fly.gif" alt="Monster flight reenactment" loading="lazy" />
+          <figcaption>Monster flight</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/bear_jump.gif" alt="Bear jump reenactment" loading="lazy" />
+          <figcaption>Bear jump</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/ghost_dance.gif" alt="Ghost dance reenactment" loading="lazy" />
+          <figcaption>Ghost dance</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/cat_walk_circle.gif" alt="Cat circular walk reenactment" loading="lazy" />
+          <figcaption>Cat circular walk</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="text-section" id="bibtex">
+      <h2>Citation</h2>
+      <pre><code>@article{chen2026anyact,
+  title={AnyAct: Towards Human Reenactment of Character Motion From Video},
+  author={Chen, Liuhan and Zhong, Lei and Wang, Jiewei and Shuai, Qin and Yuan, Li and Fan, Leidong and Li, Qing and Liu, Kanglin},
+  journal={arXiv preprint arXiv:2605.15497},
+  year={2026}
+}</code></pre>
+    </section>
+  </main>
+</body>
+</html>

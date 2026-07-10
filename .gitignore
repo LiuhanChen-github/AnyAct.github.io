@@ -1,0 +1,11 @@
+# Keep the GitHub Pages repository lightweight.
+video_demo_arxiv_v1.mp4
+video_demo_arxiv_v1_720p.mp4
+video_clip/
+anyact_arxiv_2605.15497.pdf
+contact_sheet_preview.jpg
+*.pptx
+__pycache__/
+.DS_Store
+需求.md
+anyact_youtube_url.txt
