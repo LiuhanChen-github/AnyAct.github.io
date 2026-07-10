@@ -166,6 +166,14 @@ h3 {
   font-size: 17px;
 }
 
+.text-section .wide-copy {
+  max-width: 100%;
+  margin: 0;
+  font-size: 19px;
+  line-height: 1.55;
+  text-align: left;
+}
+
 .method-content {
   width: 100%;
   max-width: 100%;
