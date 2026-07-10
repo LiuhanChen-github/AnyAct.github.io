@@ -182,7 +182,8 @@ h3 {
   border: 1px solid var(--line);
 }
 
-.text-section .aligned-copy {
+.text-section .intro-copy,
+.text-section .method-copy {
   display: block;
   width: 100%;
   max-width: none;
