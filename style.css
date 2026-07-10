@@ -167,7 +167,8 @@ h3 {
 }
 
 .method-content {
-  max-width: 1080px;
+  width: 100%;
+  max-width: 100%;
   margin: 24px auto 0;
 }
 
@@ -181,11 +182,14 @@ h3 {
   border: 1px solid var(--line);
 }
 
-.text-section .method-content p {
+.text-section .method-content .method-copy {
+  display: block;
+  width: 100%;
   max-width: none;
   margin: 0;
   font-size: 19px;
   line-height: 1.55;
+  text-align: left;
 }
 
 
@@ -263,7 +267,6 @@ pre {
 }
 
 @media (max-width: 900px) {
-  .showcase-pair-grid { grid-template-columns: 1fr; }
   .media-count-3,
   .media-count-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
