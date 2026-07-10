@@ -166,9 +166,14 @@ h3 {
   font-size: 17px;
 }
 
-.overview-figure {
-  max-width: 760px;
-  margin: 24px auto 0;
+.method-figure {
+  margin: 24px auto 18px;
+}
+
+.method-figure img {
+  width: 100%;
+  background: #fff;
+  border: 1px solid var(--line);
 }
 
 

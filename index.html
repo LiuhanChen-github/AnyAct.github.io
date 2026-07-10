@@ -65,13 +65,12 @@
 
     <section class="text-section" id="method">
       <h2>Method Overview</h2>
+      <figure class="method-figure">
+        <img src="Method_Overview.png" alt="AnyAct method overview" loading="lazy" />
+      </figure>
       <p>
-        AnyAct uses sparse local 2D controls extracted from a source video to guide motion generation. The model is trained in two stages: a 3D stage learns sparse-motion guidance, and a 2D stage then learns to control generation from projected sparse 2D observations.
+        Given reference videos of characters, AnyAct first extracts local sparse 2D joint trajectories as transferable motion cues from the input video using our model-ensemble-based Versatile Feature Extractor (VFE). These cues are then injected into a human motion generator (MoMask++) through the ControlNet-like 2D Local Adapter (2D-LA) to produce the initial human reenactments that follow the observed character dynamics.
       </p>
-        <figure class="overview-figure">
-          <img src="assets/gifs/slide02_video01_range_output_51_165.gif" alt="Range Output 51 Reference video" loading="lazy" />
-          <figcaption>Reference video</figcaption>
-        </figure>
     </section>
 
     <section id="more-results">
