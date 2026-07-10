@@ -54,7 +54,7 @@ h1 {
   width: 100%;
   max-width: 960px;
   color: #3f4652;
-  font-size: 22px;
+  font-size: 21px;
   line-height: 1.45;
   text-align: center;
 }
@@ -74,7 +74,7 @@ h1 {
   width: 100%;
   max-width: 900px;
   color: var(--muted);
-  font-size: 17px;
+  font-size: 16px;
   line-height: 1.4;
   text-align: center;
 }
@@ -83,7 +83,7 @@ h1 {
 .venue {
   margin: 0 auto 18px;
   color: var(--muted);
-  font-size: 17px;
+  font-size: 16px;
   text-align: center;
 }
 
@@ -91,24 +91,24 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 12px;
+  gap: 14px;
 }
 
 .links .btn {
   display: inline-flex;
   align-items: center;
-  gap: 9px;
+  gap: 10px;
   color: #fff;
   text-decoration: none;
-  padding: 11px 18px;
+  padding: 13px 21px;
   border-radius: 4px;
-  font-size: 17px;
+  font-size: 19px;
   font-weight: 700;
   line-height: 1.2;
 }
 
 .links .btn i {
-  font-size: 18px;
+  font-size: 21px;
   line-height: 1;
 }
 
