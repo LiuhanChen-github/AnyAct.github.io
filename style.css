@@ -215,6 +215,13 @@ h3 {
   width: 100%;
 }
 
+.human-pair-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 26px;
+  margin-top: 24px;
+}
+
 .control-edit-list {
   display: grid;
   grid-template-columns: 1fr;
