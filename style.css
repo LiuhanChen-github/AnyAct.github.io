@@ -178,38 +178,24 @@ h3 {
 
 
 
-#showcase {
-  display: block;
-}
 
-.showcase-row {
+.showcase-pair-grid,
+.more-pair-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 22px;
+  gap: 26px;
   margin-top: 24px;
 }
 
-.showcase-row-single {
-  grid-template-columns: minmax(0, 1fr);
-}
-
-.showcase-case {
-  display: block;
-  width: 100%;
-  border-top: 1px solid var(--line);
-  padding-top: 18px;
-  margin: 0;
-}
-
-.showcase-row-single .showcase-case {
+.showcase-case-wide {
+  grid-column: 1 / -1;
   max-width: 980px;
-  margin: 0 auto;
+  width: 100%;
+  justify-self: center;
 }
 
-.showcase-combined img {
+.pair-result-figure img {
   width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
 }
 
 .card-stack {
@@ -265,7 +251,7 @@ pre {
 }
 
 @media (max-width: 900px) {
-  .showcase-row { grid-template-columns: 1fr; }
+  .showcase-pair-grid { grid-template-columns: 1fr; }
   .more-pair-grid { grid-template-columns: 1fr; }
   .media-count-3,
   .media-count-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
