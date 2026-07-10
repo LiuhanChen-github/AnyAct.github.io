@@ -166,14 +166,26 @@ h3 {
   font-size: 17px;
 }
 
+.method-content {
+  max-width: 1080px;
+  margin: 24px auto 0;
+}
+
 .method-figure {
-  margin: 24px auto 18px;
+  margin: 0 0 18px;
 }
 
 .method-figure img {
   width: 100%;
   background: #fff;
   border: 1px solid var(--line);
+}
+
+.text-section .method-content p {
+  max-width: none;
+  margin: 0;
+  font-size: 19px;
+  line-height: 1.55;
 }
 
 
