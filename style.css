@@ -94,18 +94,29 @@ h1 {
   gap: 10px;
 }
 
-.links a {
+.links .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
   color: #fff;
-  background: var(--accent);
   text-decoration: none;
   padding: 8px 14px;
   border-radius: 4px;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
+  line-height: 1.2;
 }
 
-.links a:nth-child(even) { background: var(--accent-2); }
-.links a:hover { filter: brightness(0.92); }
+.links .btn i {
+  font-size: 14px;
+  line-height: 1;
+}
+
+.links .btn--primary { background: #2f5fa7; }
+.links .btn--inverse { background: #3f4652; }
+.links .btn--danger { background: #c94f4f; }
+.links .btn--model { background: #24746b; }
+.links .btn:hover { filter: brightness(0.92); }
 
 section { margin: 48px 0; }
 
