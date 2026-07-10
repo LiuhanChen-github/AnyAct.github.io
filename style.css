@@ -43,16 +43,17 @@ h1 {
 }
 
 .authors {
-  margin: 0 auto 8px;
-  max-width: 1080px;
+  margin: 0 0 8px;
+  width: 100%;
+  max-width: none;
   color: #3f4652;
   font-size: 19px;
   line-height: 1.45;
+  text-align: left;
 }
 
 .authors sup,
-.affiliations sup,
-.author-notes sup {
+.affiliations sup {
   font-size: 0.72em;
   line-height: 0;
 }
@@ -60,25 +61,16 @@ h1 {
 .affiliations {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 6px 20px;
-  margin: 0 auto 6px;
-  max-width: 1080px;
+  margin: 0 0 10px;
+  width: 100%;
+  max-width: none;
   color: var(--muted);
   font-size: 15px;
   line-height: 1.35;
 }
 
-.author-notes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 16px;
-  margin: 0 0 12px;
-  color: var(--muted);
-  font-size: 14px;
-  line-height: 1.35;
-}
 
 .venue {
   margin: 0 0 18px;
